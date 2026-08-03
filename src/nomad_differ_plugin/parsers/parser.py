@@ -120,7 +120,7 @@ class NewParser(MatchingParser):
 
         data = NewSchemaPackage()
         data.name = csv_path.stem
-        data.lab_id = csv_path.stem
+        data.lab_id = csv_path.split('-')[0]
         data.data_file = str(csv_path)
         data.process_time = mapped_values['process_time']
         data.header_timestamp = mapped_values['header_timestamp']
